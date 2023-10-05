@@ -1,0 +1,137 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+    font-family: 'Arial', sans-serif;
+}
+
+.display-4 {
+    color: #333;
+}
+.bg-dark {
+    background-color: #343a40 !important; /* Un colore di sfondo scuro */
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255,255,255,.1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.9); /* Colore chiaro per testo e link */
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../resources/istockphoto-1253437873-612x612.jpg);
+    /*background-repeat: no-repeat;*/
+    background-size:auto;
+    background-position:center;
+}
+footer {
+    background-color: #2c3e50;
+    width: 100%; /* Se vuoi che il footer si estenda sull'intera larghezza */
+    height: 10%
+}
+.main-content {
+    background-color: lightyellow;
+    width: 80%; /* puoi regolare questa percentuale a tuo piacimento */
+    
+    flex-grow: 1;
+}
+.chat-widget {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; /* assicurati che appaia sopra gli altri elementi */
+    
+}
+.bgImage {
+    background-image: url(../resources/Powersoft_Logo_Black.png);
+    background-size: 300px 70px; /* fa in modo che l'immagine copra l'intero div */
+    background-repeat: no-repeat; /* previene la ripetizione dell'immagine */
+    background-position: center center; /* centra l'immagine sia orizzontalmente che verticalmente */
+}
+
+
+
+.chat-btn {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50%; /* lo rende circolare */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2); /* un po' di ombra per dargli un effetto "elevato" */
+}
+
+    .chat-btn:hover {
+        background-color: #0056b3;
+    }
+.chatbot-toggle {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000; /* Questo assicura che il pulsante sia sopra gli altri elementi */
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none;
+    outline: none;
+}
+    .chatbot-toggle:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    .chatbot-toggle:focus {
+        outline: none;
+    }
+.chatbot-container {
+    position: fixed;
+    bottom: 70px; /* Adattare in base alle nuove dimensioni */
+    left: 10px;
+    display: none;
+    z-index: 999; /* Questo assicura che il chatbot sia sotto il pulsante */
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chatbot-iframe {
+    width: 400px; /* Larghezza dell'iframe */
+    height: 600px; /* Altezza dell'iframe */
+    border: 2px solid #007BFF; /* Bordo blu di 2px */
+    border-radius: 8px;
+}

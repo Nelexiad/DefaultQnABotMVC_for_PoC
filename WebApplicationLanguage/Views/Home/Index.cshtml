@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+ 
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".chatbot-toggle").click(function () {
+            $(".chatbot-container").toggle();  // Mostra o nasconde l'iframe del chatbot
+        });
+    });
+</script>
+ 
+<div >
+<div class="text-center">
+    <h1 class="display-4">Benvenuti alla prova del nostro ChatBot</h1>
+       
+</div>
+    <button class="chatbot-toggle">Chat con noi</button>
+    <div class="chatbot-container">
+
+        <iframe class="chatbot-iframe" src='https://webchat.botframework.com/embed/PowerBotProof?s=TRZyLJdcwg4.uUnCAV6H7kJ1iA-pr1owtKD-kySmBk70ksq8MQzME6U' ></iframe>
+    </div>
+</div>
+
+
