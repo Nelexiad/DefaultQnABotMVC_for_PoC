@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -40,9 +41,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapGet("/", async context => {
+    var html = await File.ReadAllTextAsync("wwwroot/html/index.html");
+    context.Response.ContentType = "text/html";
+    await context.Response.WriteAsync(html);
+});
 app.MapRazorPages();
 
 app.Run();
